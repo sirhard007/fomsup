@@ -52,7 +52,7 @@ body{
     font-size: 30px;
     color: #333333;
 }
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 800px){
     .header {
         padding-left: 70px;
         padding-right: 70px;
@@ -187,32 +187,44 @@ main{
     padding-top: 10px;
     margin-bottom: 20px;
 }
-.names{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    border: 1px solid #DFDFE6;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 100px;
-    padding-left: 20px;
-    color: #33333360;
-    margin-bottom: 20px;
+.input-box{
+    margin: 20px 20px;
+    position: relative;
 }
-.password{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    border: 1px solid #DFDFE6;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 100px;
-    padding-left: 20px;
+.input-box input {
+    width: 100%;
+    background: rgba(175, 175, 175, 0.212);
+    border: none;
+    padding: 14px 12px 14px 45px;
+    border-radius: 99px;
+    outline: 1px solid #33333360;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #111;
+    font-weight: 600;
+}
+.input-box input::placeholder{
     color: #33333360;
+    font-size: 17px;
+    font-weight: 500;
+}
+.input-box input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.input-box input::-ms-reveal{
+    filter: invert(100%);
+}
+
+
+.input-box i {
+   
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
 }
 h6{
     font-size: 14px;
@@ -220,25 +232,28 @@ h6{
     color: #DF5C0C;
     margin-top: 10px;
 }
-.saad{
+.remember-forgot-box{
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 20px 20px;
+    font-size: 16px;
 }
-.box{
+.remember-forgot-box label{
     display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 30px;
-    padding-left: 20px;
-    color:#33333360;
-    margin-top: 50px;
-    
+    margin-top: 30px;
+    gap: 8px;
+    cursor: pointer;
 }
-.box1{
-    border: 1px solid #33333360;
-    height: 20px;
-    width: 20px;
-    border-radius: 2px;
+.remember-forgot-box input{
+    accent-color: white;
+    cursor: pointer;
+}
+.remember-forgot-box a{
+    color: #DF5C0C;
+    text-decoration: none;
+}
+.remember-forgot-box a:hover{
+    text-decoration: underline;
 }
 .gets{
     background-color: #DF5C0C;
@@ -620,7 +635,7 @@ span{
 }
 
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 800px){
     main{
         padding-left: 70px;
         padding-right: 70px;
@@ -680,59 +695,37 @@ span{
         gap: 10px;
         align-items: center;
     }
-    .names{
-       
-        margin-left: 120px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 150px;
-        padding-left: 20px;
-        border: 2px solid #33333320;
-        margin-top: 18px;
-
-    }
-    .password{
-        border: 2px solid #DFDFE6;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 150px;
-        
-    }
-    .saad{
-        display: flex;
-        justify-content: left;
-        gap: 270px;
-        align-items: center;
-        padding-left: 100px;
-        margin-bottom: 20px;
     
-    }
+    
     h6{
         margin-bottom: 10px;
         cursor: pointer;
     }
-    .box{
-        margin-bottom: 0;
-        margin-top: 0;
-        cursor: pointer;
-        
-    }
+    
     .mon{
         display: flex;
         align-items: center;
+        justify-content:center ;
         
     }
     .ade{
         margin-bottom: 10px;
+        margin-left: 30px;
     }
-    .box1:hover{
-        background-color: #DF5C0C;
+    .remember-forgot-box{
+        display: flex;
+        justify-content: left;
+        gap: 210px;
+        
     }
+    .remember-forgot-box label{
+        margin: 0;
+    }
+    
    
     .have p{
        font-size: 14px;
-       padding-top: 8px;
+       padding-top: 10px;
        padding-left: 22px;
        cursor: pointer;
     }
@@ -978,7 +971,7 @@ footer ul li p {
     padding-bottom: 40px;
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 800px){
     footer{
         background-color: #FEFBF8;
         padding-left: 70px;
